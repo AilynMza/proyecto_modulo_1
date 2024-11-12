@@ -6,12 +6,35 @@
     <title>Flanecitos</title>
 
     <style>
+      /*Para hacer el titulo grande y darle color (formato)*/
       header {
-        background-color: peachpuff;
+        background-color: antiquewhite;
         padding: 30px;
         text-align: center;
         font-size: 35px;
         color: brown;
+      }
+
+      /*Para hacer que se vean dos columnas una al lado de la otra
+    "nav" es para definir un conjunto de enlaces de navegación
+    Se va a usar para la parte de contacto e historia*/
+      nav {
+        float: left;
+        width: 20%;
+        height: 700px;
+        background-color: brown;
+        padding: 20px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      /*Cambia color de links de navegación a blanco en vez de azul*/
+      nav ul li a {
+        color: snow;
+        font-size: 25px;
       }
     </style>
   </head>
@@ -20,5 +43,15 @@
     <header>
       <h1>Receta para Flan Napolitano</h1>
     </header>
+
+    <!-- Definir la sección donde irán los links a páginas del mismo documento -->
+    <section>
+      <nav>
+        <ul>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </section>
   </body>
 </html>
