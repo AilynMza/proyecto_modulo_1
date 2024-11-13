@@ -40,6 +40,12 @@
         height: 700px;
         font-size: larger;
       }
+
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
     </style>
   </head>
 
@@ -48,118 +54,120 @@
       <h1>¡Contáctanos!</h1>
     </header>
 
-    <!-- Definir la sección donde irán los links a páginas del mismo documento -->
-    <nav>
-      <ul>
-        <li><a href="index.html" target="_blank">Inicio</a></li>
-        <li><a href="historia.html" target="_blank">Historia</a></li>
-      </ul>
-    </nav>
+    <section>
+      <!-- Definir la sección donde irán los links a páginas del mismo documento -->
+      <nav>
+        <ul>
+          <li><a href="index.html" target="_blank">Inicio</a></li>
+          <li><a href="historia.html" target="_blank">Historia</a></li>
+        </ul>
+      </nav>
 
-    <main>
-      <h2>¿Te interesa enviar tu propia receta de flan o flan napolitano?</h2>
-      <p>
-        <strong>
-          ¡¡Envíala por este formulario y después de revisarla la publicaremos
-          junto a las demás recetas para que otros puedan intentarla!!
-        </strong>
-      </p>
-      <br /><br />
-
-      <form>
-        <label for="user_name">Nombre completo: </label>
-        <input
-          type="text"
-          name="nombre_usuario"
-          id="user_name"
-          placeholder="Escriba aquí su nombre"
-          size="100"
-          required
-        />
-
-        <br /><br />
-        <label for="gender"
-          >Nos gustaría saber sobre quien nos envía la información:</label
-        >
-        <br />
-        <input type="radio" name="genero" required /> Femenino
-        <input type="radio" name="genero" required /> Masculino
-        <input type="radio" name="genero" required /> No me identifico con
-        ninguno <input type="radio" name="genero" required /> Prefiero no
-        responder
-
+      <main>
+        <h2>¿Te interesa enviar tu propia receta de flan o flan napolitano?</h2>
+        <p>
+          <strong>
+            ¡¡Envíala por este formulario y después de revisarla la publicaremos
+            junto a las demás recetas para que otros puedan intentarla!!
+          </strong>
+        </p>
         <br /><br />
 
-        <label for="user_email">Email para contacto: </label>
-        <input
-          type="correo"
-          name="email_usuario"
-          id="user_email"
-          placeholder="Escriba aquí para contactarnos en caso de problemas o dudas"
-          size="100"
-          required
-        />
-
-        <br /><br />
-
-        <label for="password">Escriba una palabra clave: </label>
-        <input
-          type="password"
-          name="contraseña"
-          id="password"
-          size="100"
-          placeholder="En caso de alguna fe de erratas le pediremos esta palabra clave para hacer los cambios que nos solicité. Opcional."
-        />
-
-        <br /><br />
-
-        <label for="copyright"
-          >¿La receta es de su propiedad intelectual? Si no es así, compartanos
-          de quien o donde la aprendió</label
-        >
-        <br />
-        <select name="derechos_de_autor" id="copyright" required>
-          <option value="" selected disabled hidden>
-            Selecciona una opción
-          </option>
-          <option value="Propia">Es invento propio</option>
-          <option value="Familiar">Me la compartió un familiar</option>
-          <option value="Cursos">La aprendi tomando cursos de cocina</option>
-          <option value="Otro">Otra situación</option>
-        </select>
-
-        <br /><br />
-
-        <label for="recipe"
-          >Escriba aqui su receta con título, ingredientes y pasos.</label
-        >
-        <br />
-        <textarea
-          name="receta"
-          id="recipe"
-          rows="50"
-          cols="200"
-          required
-        ></textarea>
-
-        <br /><br />
-
-        <label for="terminos">
+        <form>
+          <label for="user_name">Nombre completo: </label>
           <input
-            type="checkbox"
-            name="terminos_condiciones"
-            id="terminos"
+            type="text"
+            name="nombre_usuario"
+            id="user_name"
+            placeholder="Escriba aquí su nombre"
+            size="100"
             required
           />
-          Estoy de acuerdo con compartir esta información y acepto los terminos
-          y condiciones
-        </label>
-        <br />
 
-        <br /><br />
+          <br /><br />
+          <label for="gender"
+            >Nos gustaría saber sobre quien nos envía la información:</label
+          >
+          <br />
+          <input type="radio" name="genero" required /> Femenino
+          <input type="radio" name="genero" required /> Masculino
+          <input type="radio" name="genero" required /> No me identifico con
+          ninguno <input type="radio" name="genero" required /> Prefiero no
+          responder
 
-        <button type="submit">Enviar</button>
-      </form>
-    </main>
+          <br /><br />
+
+          <label for="user_email">Email para contacto: </label>
+          <input
+            type="correo"
+            name="email_usuario"
+            id="user_email"
+            placeholder="Escriba aquí para contactarnos en caso de problemas o dudas"
+            size="100"
+            required
+          />
+
+          <br /><br />
+
+          <label for="password">Escriba una palabra clave: </label>
+          <input
+            type="password"
+            name="contraseña"
+            id="password"
+            size="100"
+            placeholder="En caso de alguna fe de erratas le pediremos esta palabra clave para hacer los cambios que nos solicité. Opcional."
+          />
+
+          <br /><br />
+
+          <label for="copyright"
+            >¿La receta es de su propiedad intelectual? Si no es así,
+            compartanos de quien o donde la aprendió</label
+          >
+          <br />
+          <select name="derechos_de_autor" id="copyright" required>
+            <option value="" selected disabled hidden>
+              Selecciona una opción
+            </option>
+            <option value="Propia">Es invento propio</option>
+            <option value="Familiar">Me la compartió un familiar</option>
+            <option value="Cursos">La aprendi tomando cursos de cocina</option>
+            <option value="Otro">Otra situación</option>
+          </select>
+
+          <br /><br />
+
+          <label for="recipe"
+            >Escriba aqui su receta con título, ingredientes y pasos.</label
+          >
+          <br />
+          <textarea
+            name="receta"
+            id="recipe"
+            rows="50"
+            cols="200"
+            required
+          ></textarea>
+
+          <br /><br />
+
+          <label for="terminos">
+            <input
+              type="checkbox"
+              name="terminos_condiciones"
+              id="terminos"
+              required
+            />
+            Estoy de acuerdo con compartir esta información y acepto los
+            terminos y condiciones
+          </label>
+          <br />
+
+          <br /><br />
+
+          <button type="submit">Enviar</button>
+        </form>
+      </main>
+    </section>
   </body>
 </html>
